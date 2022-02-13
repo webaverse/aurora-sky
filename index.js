@@ -233,7 +233,7 @@ export default () => {
             float c2 = 1.-smoothstep(0.,.6,length(q));
             float a=mod(rand(vec3(id.x,id.y, id.z)),1.);
               if(a>.9) 
-                c2 *= step(rn.y,.0005+i*i*0.001)/(cos(iTime/10.*((vUv.x)-(vUv.y))))/30.;
+                c2 *= step(rn.y,.0005+i*i*0.001)/(cos(mod(iTime,1000.)/10.*((vUv.x)-(vUv.y))))/20.;
               else
                 c2 *= step(rn.y,.0005+i*i*0.001);
             c += c2*(mix(vec3(1.0,0.49,0.1),vec3(0.75,0.9,1.),rn.y)*0.3+0.9);
