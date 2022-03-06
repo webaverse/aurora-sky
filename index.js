@@ -341,7 +341,9 @@ export default () => {
         fragmentShader,
         uniforms,
         transparent: true,
-        side: THREE.DoubleSide
+        side: THREE.DoubleSide,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
 
 
     });
